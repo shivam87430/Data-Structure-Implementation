@@ -1,10 +1,10 @@
 package linkedlist;
 
-public class Addition {
+public class LinkedListImplementation {
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        Addition addition = new Addition();
-        addition.insertionOnFirstNode(singlyLinkedList);
+        LinkedListImplementation linkedListImplementation = new LinkedListImplementation();
+        linkedListImplementation.insertionOnFirstNode(singlyLinkedList);
     }
 
     public void simpleInsertion(SinglyLinkedList singlyLinkedList){
@@ -12,13 +12,14 @@ public class Addition {
         SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(20);
         SinglyLinkedList.ListNode third =  new SinglyLinkedList.ListNode(30);
         SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(1);
+        SinglyLinkedList.ListNode fifth = new SinglyLinkedList.ListNode(1);
 
 //        Now Data is stored in Linked List further we have to connect it so that it forms a linked list
 
         singlyLinkedList.head.next = second; // 10 --> 20
         second.next = third;                 // 10 --> 20 --> 30
-        third.next = fourth;                 // 10 --> 20 --> 30 --> 1
-
+        third.next = fourth;            // 10 --> 20 --> 30 --> 1
+        fourth.next = fifth;
 //        Printing value of Linked List
         singlyLinkedList.display();
 

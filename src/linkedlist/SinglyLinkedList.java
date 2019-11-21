@@ -1,5 +1,7 @@
 package linkedlist;
 
+import jdk.nashorn.internal.ir.WhileNode;
+
 public class SinglyLinkedList {
 
     public ListNode head;
@@ -83,5 +85,30 @@ public class SinglyLinkedList {
             current = next;
         }
         return previous;
+    }
+
+    /*Find Middle Value Of Linked List */
+
+    public ListNode findMiddleValueOfLinkedList(){
+        ListNode currentPtr = head;
+        ListNode fastPtr = head;
+
+        while (fastPtr != null && fastPtr.next != null){
+            currentPtr = currentPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+        return currentPtr;
+    }
+
+    /*Remove Duplicates From Linked List*/
+    public void removeDuplicatesFromLinkedList(){
+        ListNode current = head;
+        while (current != null && current.next != null){
+            if (current.data == current.next.data){
+                current.next = current.next.next;
+            }else {
+                current = current.next;
+            }
+        }
     }
 }

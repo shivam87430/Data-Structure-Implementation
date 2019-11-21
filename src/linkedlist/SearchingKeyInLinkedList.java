@@ -2,9 +2,9 @@ package linkedlist;
 
 public class SearchingKeyInLinkedList {
     public static void main(String[] args) {
-        Addition addition = new Addition();
+        LinkedListImplementation linkedListImplementation = new LinkedListImplementation();
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        addition.simpleInsertion(singlyLinkedList);
+        linkedListImplementation.simpleInsertion(singlyLinkedList);
         SearchingKeyInLinkedList searchingKeyInLinkedList = new SearchingKeyInLinkedList();
         searchingKeyInLinkedList.searchingKeyInLinkedList(10,singlyLinkedList);
     }
