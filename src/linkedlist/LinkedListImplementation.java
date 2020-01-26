@@ -8,10 +8,10 @@ public class LinkedListImplementation {
     }
 
     public void simpleInsertion(SinglyLinkedList singlyLinkedList){
-        singlyLinkedList.head = new SinglyLinkedList.ListNode(10);
-        SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(20);
-        SinglyLinkedList.ListNode third =  new SinglyLinkedList.ListNode(30);
-        SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(1);
+        singlyLinkedList.head = new SinglyLinkedList.ListNode(1);
+        SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(2);
+        SinglyLinkedList.ListNode third =  new SinglyLinkedList.ListNode(3);
+        SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(2);
         SinglyLinkedList.ListNode fifth = new SinglyLinkedList.ListNode(1);
 
 //        Now Data is stored in Linked List further we have to connect it so that it forms a linked list
@@ -47,4 +47,19 @@ public class LinkedListImplementation {
         singlyLinkedList.display();
     }
 
+    public void havingLoop(SinglyLinkedList singlyLinkedList){
+        singlyLinkedList.head = new SinglyLinkedList.ListNode(1);
+        SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(10);
+        SinglyLinkedList.ListNode third = new SinglyLinkedList.ListNode(21);
+        SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(3);
+        SinglyLinkedList.ListNode fifth = new SinglyLinkedList.ListNode(4);
+        SinglyLinkedList.ListNode sixth = new SinglyLinkedList.ListNode(9);
+
+        singlyLinkedList.head.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = third;
+    }
 }
