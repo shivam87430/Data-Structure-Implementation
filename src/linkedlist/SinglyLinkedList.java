@@ -149,17 +149,19 @@ public class SinglyLinkedList {
     }
 
     /*Check List Node is Containing Loop or Not*/
-    public boolean checkLoop(){
+    public boolean checkLoop(ListNode head){
         ListNode fastPtr = head;
         ListNode slowPtr = head;
+        boolean havingLopp = false;
         while (fastPtr != null && fastPtr.next != null){
             fastPtr = fastPtr.next.next;
             slowPtr = slowPtr.next;
             if(slowPtr == fastPtr){
-                return true;
+                havingLopp = true;
+                return havingLopp;
             }
         }
-        return false;
+        return havingLopp;
     }
 
     /*Check list is Palindrome or not*/
@@ -225,6 +227,81 @@ public class SinglyLinkedList {
                head.next = reverseLinkedListInAGroupOfSize(next,k);
             return previous;
         }
+
+        public ListNode removeNthNodeFromEnd(ListNode head,int k){
+            ListNode mainPointer = head;
+            ListNode referencePointer = head;
+            int count = 0;
+            while (count < k){
+                referencePointer = referencePointer.next;
+                count++;
+            }
+            while (referencePointer!=null){
+               mainPointer = mainPointer.next;
+               referencePointer = referencePointer.next;
+            }
+            return mainPointer;
+        }
+
+        public ListNode entryPointOfLoop(ListNode head){
+            ListNode fastPtr = head;
+            ListNode slowPtr = head;
+            boolean havingLopp = false;
+            while (fastPtr != null && fastPtr.next != null){
+                fastPtr = fastPtr.next.next;
+                slowPtr = slowPtr.next;
+                if(slowPtr == fastPtr){
+                    havingLopp = true;
+                    break;
+                }
+            }
+
+            if(havingLopp){
+                System.out.println("Having loop");
+                slowPtr = head;
+                while (slowPtr!=fastPtr){
+                    slowPtr = slowPtr.next;
+                    fastPtr = fastPtr.next;
+                }
+            }else {
+                System.out.println("Loop doesn't exist");
+                slowPtr = null;
+            }
+            return slowPtr;
+        }
+
+        public int findLengthOfLoop(ListNode head){
+            ListNode slowptr = head;
+            ListNode fastptr = head;
+            int count = 0;
+            boolean havingLoop = false;
+            while (fastptr!=null && fastptr.next!=null){
+                fastptr = fastptr.next.next;
+                slowptr = slowptr.next;
+                if(slowptr==fastptr){
+                    havingLoop = true;
+                    break;
+                }
+            }
+            if(havingLoop){
+                slowptr = head;
+                while (slowptr != fastptr){
+                    slowptr = slowptr.next;
+                    fastptr = fastptr.next;
+
+                }
+            }else{
+                System.out.println("Loop doesn't exist");
+                return count;
+            }
+            while (slowptr != fastptr.next){
+                fastptr = fastptr.next;
+                count++;
+            }
+            return count;
+
+        }
+
 
 
 }

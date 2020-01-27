@@ -5,7 +5,7 @@ public class CheckingLoop {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         LinkedListImplementation linkedListImplementation = new LinkedListImplementation();
         linkedListImplementation.havingLoop(singlyLinkedList);
-        boolean checkingLoop = singlyLinkedList.checkLoop();
+        boolean checkingLoop = singlyLinkedList.checkLoop(singlyLinkedList.head);
         if(checkingLoop){
             System.out.println("Loop is present in Linked List");
         }else

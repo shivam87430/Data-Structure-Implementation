@@ -24,7 +24,7 @@ public class LinkedListImplementation {
         singlyLinkedList.display();
 
 //        Count Of Linked List
-        singlyLinkedList.count();
+        System.out.println("Count is :: " + singlyLinkedList.count());
     }
 
     public void insertionOnFirstNode(SinglyLinkedList singlyLinkedList){
