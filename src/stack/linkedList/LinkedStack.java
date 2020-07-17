@@ -35,4 +35,5 @@ public class LinkedStack {
             System.out.println(iterator.next());
         }
     }
+
 }
