@@ -11,4 +11,6 @@ public class CheckingLoop {
         }else
             System.out.println("Loop is not present in linked List");
     }
+
+    private String aws_access_key_id = " AKIAIOSFODNN7EXAMPLE";
 }
