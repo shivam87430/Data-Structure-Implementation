@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SinglyLinkedList {
 
-    private String key = "mm7IXuvzJGog56ak7KmBpgy0g5r6/vuioU8ASJzt";
+    private String key = "AKIASXL6B65O2NIJFVRR";
 
     public ListNode head;
 
