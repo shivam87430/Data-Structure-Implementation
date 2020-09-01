@@ -1,9 +1,6 @@
 package linkedlist;
 
-import jdk.nashorn.internal.ir.WhileNode;
-
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class SinglyLinkedList {
@@ -303,5 +300,14 @@ public class SinglyLinkedList {
         }
 
 
-
+    public static void main(String[] args) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("a");
+        stringBuilder.append("b");
+        stringBuilder.append("c");
+        System.out.println(stringBuilder);
+        System.out.println(stringBuilder.reverse());
+        char value = stringBuilder.charAt(0);
+        System.out.println(Integer.parseInt(String.valueOf(value)));
+        }
 }
