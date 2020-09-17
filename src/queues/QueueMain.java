@@ -10,7 +10,7 @@ public class QueueMain {
         Employee rishabhKhatreja = new Employee("Rishabh","Khatreja",3254);
         Employee vishalMadheshiya = new Employee("Vishal","Madheshiya",3456);
 
-        ArrayQueue queue = new ArrayQueue(5);
+        /*ArrayQueue queue = new ArrayQueue(5);
         queue.add(shivamSaxena);
         queue.add(ankitDubey);
         queue.remove();
@@ -20,10 +20,16 @@ public class QueueMain {
         queue.remove();
         queue.add(shivamSaxena);
         queue.remove();
-        queue.add(ankitDubey);
+        queue.add(ankitDubey);*/
 
         /*queue.add(vishalMadheshiya);*/
 
+        ArrayQueue queue = new ArrayQueue(5);
+        queue.add(shivamSaxena);
+        queue.add(ankitDubey);
+        queue.add(rishabhKhatreja);
+        queue.add(vishalMadheshiya);
+        queue.add(shivamSaxena);
         queue.printQueue();
     }
 }
