@@ -5,8 +5,6 @@ import java.util.List;
 
 public class SinglyLinkedList {
 
-    private String key = "AKIASXL6B65O2NIJFVRR";
-
     public ListNode head;
 
     public static class ListNode{
