@@ -3,6 +3,7 @@ package queues.arrayImplementation;
 
 import queues.Employee;
 
+import java.util.HashSet;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue {
@@ -90,4 +91,15 @@ public class ArrayQueue {
             }
         }
     }
+}
+
+class A{
+    public static void main(String[] args) {
+        Integer[] array = new Integer[]{1,2,1,2,1,2};
+        HashSet<Integer> set = new HashSet<>();
+        for(Integer integer : array){
+            set.add(integer);
+        }
+    }
+
 }
